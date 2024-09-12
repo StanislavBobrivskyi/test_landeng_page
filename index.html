@@ -127,7 +127,50 @@
         </div>
     </section>
 
-    <section id="gallery" class="fade-in">
+    <!-- Секція галереї -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Галерея свічок</h2>
+            <div class="gallery-grid">
+                <img src="images/candle1.jpg" alt="Свічка 1" class="gallery-image" data-title="Свічка 1"
+                    data-description="Опис свічки 1"
+                    data-images="images/candle1-1.jpg,images/candle1-2.jpg,images/candle1-3.jpg,images/candle1-4.jpg">
+                <img src="images/candle2.jpg" alt="Свічка 2" class="gallery-image" data-title="Свічка 2"
+                    data-description="Опис свічки 2"
+                    data-images="images/candle2-1.jpg,images/candle2-2.jpg,images/candle2-3.jpg,images/candle2-4.jpg">
+                <img src="images/candle3.jpg" alt="Свічка 3" class="gallery-image" data-title="Свічка 3"
+                    data-description="Опис свічки 3"
+                    data-images="images/candle3-1.jpg,images/candle3-2.jpg,images/candle3-3.jpg,images/candle3-4.jpg">
+                <img src="images/candle3.jpg" alt="Свічка 3" class="gallery-image" data-title="Свічка 3"
+                    data-description="Опис свічки 3"
+                    data-images="images/candle3-1.jpg,images/candle3-2.jpg,images/candle3-3.jpg,images/candle3-4.jpg">
+                <!-- Додавайте більше свічок за необхідності -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальне вікно для опису свічки -->
+    <!-- Модальне вікно для опису свічки -->
+    <div id="candle-description-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="candle-title">Назва Свічки</h2>
+            <div class="candle-gallery">
+                <!-- Велике зображення -->
+                <img id="main-image" src="" alt="Головне зображення свічки">
+                <!-- Маленькі зображення для галереї -->
+                <div class="thumbnail-gallery">
+                    <img id="gallery-image-1" src="" alt="Свічка Фото 1">
+                    <img id="gallery-image-2" src="" alt="Свічка Фото 2">
+                    <img id="gallery-image-3" src="" alt="Свічка Фото 3">
+                    <img id="gallery-image-4" src="" alt="Свічка Фото 4">
+                </div>
+            </div>
+            <p id="candle-description">Опис свічки...</p>
+        </div>
+    </div>
+
+    <!-- <section id="gallery" class="fade-in">
         <div class="container">
             <h2>Галерея</h2>
             <div class="gallery-grid">
@@ -137,7 +180,7 @@
                 <img src="images/candle4.jpg" alt="Аромасвічка 4">
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="benefits" class="fade-in">
         <div class="container">
@@ -154,8 +197,8 @@
     <section id="order">
         <div class="container">
             <h2>Замовити свічку</h2>
-            <form id="order-form" action="#" method="post">
-                <!-- Додаємо зображення свічок для вибору -->
+            <form id="order-form" action="send_order.php" method="POST">
+
                 <label for="candle">Оберіть свічку:</label>
                 <div class="candle-selection">
                     <label>
@@ -170,7 +213,7 @@
                         <input type="radio" name="candle" value="candle3">
                         <img src="images/candle3.jpg" alt="Свічка 3" class="candle-option">
                     </label>
-                    <!-- Додавайте більше свічок за необхідності -->
+
                 </div>
 
                 <label for="name">Ваше ім'я:</label>
